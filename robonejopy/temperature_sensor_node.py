@@ -12,6 +12,7 @@ class TemperatureSensorNode(Node):
         self.timer = self.create_timer(1.0, self.timer_callback)
 
         # Initialize I2C and MLX90614 sensor
+        print("SCL: ",board.SCL," SDA: ",board.SDA)
         i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
         self.mlx = MLX90614(i2c)
 

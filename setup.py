@@ -29,13 +29,15 @@ setup(
             'camCheck = robonejopy.camCheck:main',
             'cameraPub = robonejopy.cameraPub:main',
             'navegacao = robonejopy.navegacao:main',
-            'detector = robonejopy.detector:main',
+            'detectorSQLite = robonejopy.detectorSQLite:main',
             'detectorCheck = robonejopy.detectorCheck:main',
             'controleSerial = robonejopy.controleSerial:main',
             'seguidorCorredor = robonejopy.seguidorCorredor:main',
             'lane_detector_node = robonejopy.lane_detector_node:main',
             'temperature_sensor_node = robonejopy.temperature_sensor_node:main',
-            'ambient_temperature_node = robonejopy.ambient_temperature_node:main'
+            'ambient_temperature_node = robonejopy.ambient_temperature_node:main',
+            'slam_node = robonejopy.slam_node:main',
+            'imu_node = robonejopy.imu_node:main'
         ],
     },
     

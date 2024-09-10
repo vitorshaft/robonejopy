@@ -8,7 +8,7 @@ class TemperatureSensorNode(Node):
         super().__init__('ambient_temperature_node')
         self.publisher = self.create_publisher(Temperature, '/ambient_temperature', 10)
         self.sensor = Adafruit_DHT.DHT11
-        self.pin = 4  # GPIO pin where the DHT11 is connected
+        self.pin = 17  # GPIO pin where the DHT11 is connected
 
         # Timer to read sensor data every 5 seconds
         self.timer = self.create_timer(3.0, self.read_sensor)

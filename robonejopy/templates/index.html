@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robonejo Control</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/roslib/build/roslib.min.js"></script>
+</head>
+<body>
+    <h1>Controle do Robonejo</h1>
+
+    <!-- Área para exibir a temperatura -->
+    <div>
+        <h2>Temperatura</h2>
+        <p id="temperature">Aguardando dados...</p>
+    </div>
+
+    <!-- Controle do Robô -->
+    <div>
+        <h2>Controle de Movimento</h2>
+        <button onclick="moveRobot(0.5, 0)">Frente</button>
+        <button onclick="moveRobot(-0.5, 0)">Trás</button>
+        <button onclick="moveRobot(0, 0.5)">Esquerda</button>
+        <button onclick="moveRobot(0, -0.5)">Direita</button>
+        <button onclick="stopRobot()">Parar</button>
+    </div>
+
+    <!-- Script para conectar ao ROS e controlar o robô -->
+    <script type="text/javascript">
+        // Conectar ao ROSBridge
+        var ros = new ROSLIB.Ros({
+            url: 'ws://192.168.0.19:9090'  // Substitua <RASPBERRY_PI_IP> pelo IP do Raspberry Pi
+        });
+
+        ros.on('connection', function() {
+            console.log('Conectado ao websocket ROS');
+        });
+
+        ros.on('error', function(error) {
+            console.log('Erro ao conectar ao websocket ROS: ', error);
+        });
+
+        ros.on('close', function() {
+            console.log('Conexão com o websocket ROS fechada');
+        });
+
+        // Assinar o tópico de temperatura
+        var temperature_listener = new ROSLIB.Topic({
+            ros: ros,
+            name: '/temperature',
+            messageType: 'sensor_msgs/Temperature'
+        });
+
+        temperature_listener.subscribe(function(message) {
+            document.getElementById('temperature').innerHTML = 'Temperatura: ' + message.temperature.toFixed(2) + ' °C';
+        });
+
+        // Função para enviar comandos de movimento para o robô
+        function moveRobot(linear, angular) {
+            var cmdVel = new ROSLIB.Topic({
+                ros: ros,
+                name: '/cmd_vel',
+                messageType: 'geometry_msgs/Twist'
+            });
+
+            var twist = new ROSLIB.Message({
+                linear: {
+                    x: linear,
+                    y: 0,
+                    z: 0
+                },
+                angular: {
+                    x: 0,
+                    y: 0,
+                    z: angular
+                }
+            });
+
+            cmdVel.publish(twist);
+        }
+
+        // Função para parar o robô
+        function stopRobot() {
+            moveRobot(0, 0);
+        }
+    </script>
+</body>
+</html>
