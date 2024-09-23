@@ -48,7 +48,7 @@
         var temperature_listener = new ROSLIB.Topic({
             ros: ros,
             name: '/temperature',
-            messageType: 'sensor_msgs/Temperature'
+            messageType: 'sensor_msgs/msg/Temperature'
         });
 
         temperature_listener.subscribe(function(message) {
