@@ -37,7 +37,8 @@ setup(
             'temperature_sensor_node = robonejopy.temperature_sensor_node:main',
             'humidity_node = robonejopy.humidity_node:main',
             'slam_node = robonejopy.slam_node:main',
-            'imu_node = robonejopy.imu_node:main'
+            'imu_node = robonejopy.imu_node:main',
+            'ammonia_sensor_node = robonejopy.ammonia_sensor_node:main'
         ],
     },
     
