@@ -13,13 +13,16 @@ class CmdVelToSerialNode(Node):
             '/cmd_vel',
             self.cmd_vel_callback,
             10)
-        self.serial_port = serial.Serial('/dev/ttyUSB0', 9600)  # Defina a porta serial correta e a taxa de transmissão
+        try:
+            self.serial_port = serial.Serial('/dev/ttyUSB0', 9600, timeout=0.1)
+        except Exception as e:
+            self.get_logger().error(f'Falha ao abrir serial: {e}')
         self.get_logger().info('CmdVelToSerialNode inicializado')
 
     def cmd_vel_callback(self, msg):
         ang = msg.angular.z
         lin = msg.linear.x
-        self.serial_port = serial.Serial('/dev/ttyUSB0', 9600)
+        #self.serial_port = serial.Serial('/dev/ttyUSB0', 9600)
         if(ang > 1.0 and lin == 0.0):
             self.serial_port.write(str(0).encode())
         elif(ang > 0.0 and lin > 0.0):

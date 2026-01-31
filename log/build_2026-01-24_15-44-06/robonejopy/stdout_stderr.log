@@ -1,0 +1,26 @@
+running develop
+running egg_info
+writing robonejopy.egg-info/PKG-INFO
+writing dependency_links to robonejopy.egg-info/dependency_links.txt
+writing entry points to robonejopy.egg-info/entry_points.txt
+writing requirements to robonejopy.egg-info/requires.txt
+writing top-level names to robonejopy.egg-info/top_level.txt
+reading manifest file 'robonejopy.egg-info/SOURCES.txt'
+writing manifest file 'robonejopy.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy.egg-link (link to .)
+Installing ammonia_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing cameraPub script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing conducao script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing controleSerial script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing detectorSQLite script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing humidity_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing imu_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing lane_detector_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing pose_publisher_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing seguidorCorredor script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing slam_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing temperature_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+
+Installed /home/robot/ws/src/robonejopy/build/robonejopy
+running symlink_data

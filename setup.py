@@ -1,3 +1,5 @@
+import os
+from glob import glob
 from setuptools import find_packages, setup
 
 package_name = 'robonejopy'
@@ -10,6 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        # Correção aqui: adicionamos 'share/' + package_name antes do 'launch'
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
     ],
     install_requires=[
         'matplotlib',
@@ -25,20 +29,17 @@ setup(
     package_data={'': ['requirements.txt']},
     entry_points={
         'console_scripts': [
-            'conducao = robonejopy.conducao:main',
-            'camCheck = robonejopy.camCheck:main',
             'cameraPub = robonejopy.cameraPub:main',
-            'navegacao = robonejopy.navegacao:main',
+            'dead_reckoning_node = robonejopy.dead_reckoning_node:main',
             'detectorSQLite = robonejopy.detectorSQLite:main',
-            'detectorCheck = robonejopy.detectorCheck:main',
             'controleSerial = robonejopy.controleSerial:main',
-            'seguidorCorredor = robonejopy.seguidorCorredor:main',
             'lane_detector_node = robonejopy.lane_detector_node:main',
             'temperature_sensor_node = robonejopy.temperature_sensor_node:main',
             'humidity_node = robonejopy.humidity_node:main',
-            'slam_node = robonejopy.slam_node:main',
             'imu_node = robonejopy.imu_node:main',
-            'ammonia_sensor_node = robonejopy.ammonia_sensor_node:main'
+            'ammonia_sensor_node = robonejopy.ammonia_sensor_node:main',
+            'pose_publisher_node = robonejopy.pose_publisher_node:main',
+	        'ultrasonic_bridge = robonejopy.ultrasonic_bridge:main',
         ],
     },
     

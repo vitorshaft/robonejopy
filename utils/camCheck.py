@@ -2,7 +2,9 @@ import cv2
 
 # Endereço IP da ESP32-CAM e a porta para a stream de vídeo
 #url = 'http://192.168.76.224:81/stream'
-url = '/dev/video0'
+#url = '/dev/video0'
+#url = 'http://192.168.0.102:81/stream'
+url = 'http://192.168.0.102/'
 # Cria um objeto VideoCapture para capturar a stream de vídeo
 cap = cv2.VideoCapture(url)
 

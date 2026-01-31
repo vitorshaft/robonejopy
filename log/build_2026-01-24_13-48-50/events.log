@@ -1,0 +1,76 @@
+[0.000000] (-) TimerEvent: {}
+[0.001854] (robonejopy) JobQueued: {'identifier': 'robonejopy', 'dependencies': OrderedDict()}
+[0.002075] (robonejopy) JobStarted: {'identifier': 'robonejopy'}
+[0.098177] (-) TimerEvent: {}
+[0.199231] (-) TimerEvent: {}
+[0.301256] (-) TimerEvent: {}
+[0.402010] (-) TimerEvent: {}
+[0.502782] (-) TimerEvent: {}
+[0.603672] (-) TimerEvent: {}
+[0.704654] (-) TimerEvent: {}
+[0.806047] (-) TimerEvent: {}
+[0.907194] (-) TimerEvent: {}
+[1.008000] (-) TimerEvent: {}
+[1.109182] (-) TimerEvent: {}
+[1.209940] (-) TimerEvent: {}
+[1.310673] (-) TimerEvent: {}
+[1.411365] (-) TimerEvent: {}
+[1.512124] (-) TimerEvent: {}
+[1.612785] (-) TimerEvent: {}
+[1.713510] (-) TimerEvent: {}
+[1.814166] (-) TimerEvent: {}
+[1.914987] (-) TimerEvent: {}
+[2.015691] (-) TimerEvent: {}
+[2.116443] (-) TimerEvent: {}
+[2.217146] (-) TimerEvent: {}
+[2.317949] (-) TimerEvent: {}
+[2.377788] (robonejopy) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/robot/ws/src/robonejopy/build/robonejopy/build', '--no-deps', 'symlink_data'], 'cwd': '/home/robot/ws/src/robonejopy/build/robonejopy', 'env': {'HOSTNAME': 'robonejo', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/home/robot/ws/src', 'ROS_PYTHON_VERSION': '3', 'SERIAL_PORT': '/dev/ttyUSB0', 'COLCON_PREFIX_PATH': '/home/robot/ws/src/robonejopy/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': '', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/robot/ws/src/robonejopy/install/robonejopy:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'PWD': '/home/robot/ws/src/robonejopy/build/robonejopy', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/robot/ws/src/robonejopy/build/robonejopy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages:/home/robot/ws/src/robonejopy/build/robonejopy:/home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[2.418102] (-) TimerEvent: {}
+[2.518823] (-) TimerEvent: {}
+[2.619669] (-) TimerEvent: {}
+[2.720465] (-) TimerEvent: {}
+[2.821162] (-) TimerEvent: {}
+[2.921849] (-) TimerEvent: {}
+[3.022522] (-) TimerEvent: {}
+[3.123188] (-) TimerEvent: {}
+[3.223859] (-) TimerEvent: {}
+[3.324505] (-) TimerEvent: {}
+[3.377651] (robonejopy) StdoutLine: {'line': b'running develop\n'}
+[3.424660] (-) TimerEvent: {}
+[3.525320] (-) TimerEvent: {}
+[3.626022] (-) TimerEvent: {}
+[3.726850] (-) TimerEvent: {}
+[3.827584] (-) TimerEvent: {}
+[3.911321] (robonejopy) StdoutLine: {'line': b'running egg_info\n'}
+[3.911925] (robonejopy) StdoutLine: {'line': b'writing robonejopy.egg-info/PKG-INFO\n'}
+[3.912726] (robonejopy) StdoutLine: {'line': b'writing dependency_links to robonejopy.egg-info/dependency_links.txt\n'}
+[3.914739] (robonejopy) StdoutLine: {'line': b'writing entry points to robonejopy.egg-info/entry_points.txt\n'}
+[3.915674] (robonejopy) StdoutLine: {'line': b'writing requirements to robonejopy.egg-info/requires.txt\n'}
+[3.916460] (robonejopy) StdoutLine: {'line': b'writing top-level names to robonejopy.egg-info/top_level.txt\n'}
+[3.924909] (robonejopy) StdoutLine: {'line': b"reading manifest file 'robonejopy.egg-info/SOURCES.txt'\n"}
+[3.927729] (-) TimerEvent: {}
+[3.929877] (robonejopy) StdoutLine: {'line': b"writing manifest file 'robonejopy.egg-info/SOURCES.txt'\n"}
+[3.936062] (robonejopy) StdoutLine: {'line': b'running build_ext\n'}
+[3.937044] (robonejopy) StdoutLine: {'line': b'Creating /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy.egg-link (link to .)\n'}
+[3.941564] (robonejopy) StdoutLine: {'line': b'Installing ammonia_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.942489] (robonejopy) StdoutLine: {'line': b'Installing camCheck script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.943338] (robonejopy) StdoutLine: {'line': b'Installing cameraPub script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.944179] (robonejopy) StdoutLine: {'line': b'Installing conducao script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.944995] (robonejopy) StdoutLine: {'line': b'Installing controleSerial script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.945867] (robonejopy) StdoutLine: {'line': b'Installing detectorCheck script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.946690] (robonejopy) StdoutLine: {'line': b'Installing detectorSQLite script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.947496] (robonejopy) StdoutLine: {'line': b'Installing humidity_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.948308] (robonejopy) StdoutLine: {'line': b'Installing imu_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.949111] (robonejopy) StdoutLine: {'line': b'Installing lane_detector_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.950004] (robonejopy) StdoutLine: {'line': b'Installing navegacao script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.950821] (robonejopy) StdoutLine: {'line': b'Installing seguidorCorredor script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.951634] (robonejopy) StdoutLine: {'line': b'Installing slam_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.952434] (robonejopy) StdoutLine: {'line': b'Installing temperature_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy\n'}
+[3.954704] (robonejopy) StdoutLine: {'line': b'\n'}
+[3.955392] (robonejopy) StdoutLine: {'line': b'Installed /home/robot/ws/src/robonejopy/build/robonejopy\n'}
+[3.956742] (robonejopy) StdoutLine: {'line': b'running symlink_data\n'}
+[4.028011] (-) TimerEvent: {}
+[4.081861] (robonejopy) CommandEnded: {'returncode': 0}
+[4.128129] (-) TimerEvent: {}
+[4.141772] (robonejopy) JobEnded: {'identifier': 'robonejopy', 'rc': 0}
+[4.145371] (-) EventReactorShutdown: {}

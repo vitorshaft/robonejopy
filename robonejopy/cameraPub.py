@@ -1,41 +1,76 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge, CvBridgeError
+from cv_bridge import CvBridge
 import cv2
+import numpy as np
+import urllib.request
 
-class CameraImagePublisher(Node):
-    def __init__(self, camera_url):
-        super().__init__('camera_image_publisher')
+class CameraPublisher(Node):
+    def __init__(self):
+        super().__init__('camera_publisher')
+        self.publisher_ = self.create_publisher(Image, '/camera/image_raw', 10)
         self.bridge = CvBridge()
-        self.image_publisher = self.create_publisher(Image, '/camera/image_raw', 10)
-        self.capture = cv2.VideoCapture(camera_url)
-        if not self.capture.isOpened():
-            self.get_logger().error(f"Failed to open camera at {camera_url}")
-        else:
-            self.get_logger().info(f"Camera opened successfully at {camera_url}")
-
-    def publish_images(self):
-        ret, frame = self.capture.read()
-        if not ret or frame is None or frame.size == 0:
-            self.get_logger().error("Failed to capture image from camera")
-            return
-
+        
+        # URL atualizada com a Porta 81 e o IP correto
+        self.url = 'http://192.168.0.101:81/'
+        
+        # Buffer para acumular os bytes do stream
+        self.bytes_buffer = b''
+        
+        # Timer para processar o stream (15 FPS aproximadamente)
+        self.create_timer(0.06, self.timer_callback)
+        self.get_logger().info(f"Conectando ao Stream da ESP32-CAM em {self.url}")
+        
         try:
-            img = cv2.resize(frame, (160, 120))  # Ajustar o tamanho conforme necessário
-            image_msg = self.bridge.cv2_to_imgmsg(img, encoding='bgr8')
-            self.image_publisher.publish(image_msg)
-            self.get_logger().info("Published image to /camera/image_raw")
-        except CvBridgeError as e:
-            self.get_logger().error(f"Error converting image: {e}")
+            self.stream = urllib.request.urlopen(self.url, timeout=5)
+        except Exception as e:
+            self.get_logger().error(f"Não foi possível abrir o stream: {e}")
 
-def main():
-    camera_url = '/dev/video0'  # Substitua pelo endereço da sua câmera
-    rclpy.init()
-    node = CameraImagePublisher(camera_url)
+    def timer_callback(self):
+        try:
+            # Lê um pedaço do stream e adiciona ao buffer
+            self.bytes_buffer += self.stream.read(4096)
+            
+            # Procura os marcadores de início (0xff 0xd8) e fim (0xff 0xd9) do JPEG
+            a = self.bytes_buffer.find(b'\xff\xd8')
+            b = self.bytes_buffer.find(b'\xff\xd9')
+            
+            if a != -1 and b != -1:
+                # Extrai apenas os bytes da imagem
+                jpg_data = self.bytes_buffer[a:b+2]
+                # Limpa o buffer para o próximo frame
+                self.bytes_buffer = self.bytes_buffer[b+2:]
+                
+                # Decodifica os bytes para uma imagem OpenCV
+                frame = cv2.imdecode(np.frombuffer(jpg_data, dtype=np.uint8), cv2.IMREAD_COLOR)
+                
+                if frame is not None:
+                    # Redimensiona para manter leve no Foxglove (320x240)
+                    frame_resized = cv2.resize(frame, (320, 240))
+                    
+                    # Converte para mensagem ROS e publica
+                    img_msg = self.bridge.cv2_to_imgmsg(frame_resized, encoding='bgr8')
+                    img_msg.header.stamp = self.get_clock().now().to_msg()
+                    img_msg.header.frame_id = 'camera_link'
+                    
+                    self.publisher_.publish(img_msg)
+                    
+        except Exception as e:
+            # Se a conexão cair, tenta reabrir
+            self.get_logger().warn("Conexão perdida com a ESP32-CAM. Reconectando...")
+            try:
+                self.stream = urllib.request.urlopen(self.url, timeout=2)
+            except:
+                pass
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = CameraPublisher()
     try:
-        while rclpy.ok():
-            node.publish_images()
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
     finally:
         node.destroy_node()
         rclpy.shutdown()

@@ -1,0 +1,14 @@
+[console_scripts]
+ammonia_sensor_node = robonejopy.ammonia_sensor_node:main
+cameraPub = robonejopy.cameraPub:main
+conducao = robonejopy.conducao:main
+controleSerial = robonejopy.controleSerial:main
+detectorSQLite = robonejopy.detectorSQLite:main
+humidity_node = robonejopy.humidity_node:main
+imu_node = robonejopy.imu_node:main
+lane_detector_node = robonejopy.lane_detector_node:main
+pose_publisher_node = robonejopy.pose_publisher_node:main
+seguidorCorredor = robonejopy.seguidorCorredor:main
+slam_node = robonejopy.slam_node:main
+temperature_sensor_node = robonejopy.temperature_sensor_node:main
+

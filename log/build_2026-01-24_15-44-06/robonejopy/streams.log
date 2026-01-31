@@ -1,0 +1,28 @@
+[2.408s] Invoking command in '/home/robot/ws/src/robonejopy/build/robonejopy': PYTHONPATH=/home/robot/ws/src/robonejopy/build/robonejopy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robot/ws/src/robonejopy/build/robonejopy/build --no-deps symlink_data
+[3.415s] running develop
+[3.965s] running egg_info
+[3.969s] writing robonejopy.egg-info/PKG-INFO
+[3.970s] writing dependency_links to robonejopy.egg-info/dependency_links.txt
+[3.970s] writing entry points to robonejopy.egg-info/entry_points.txt
+[3.971s] writing requirements to robonejopy.egg-info/requires.txt
+[3.971s] writing top-level names to robonejopy.egg-info/top_level.txt
+[3.979s] reading manifest file 'robonejopy.egg-info/SOURCES.txt'
+[3.983s] writing manifest file 'robonejopy.egg-info/SOURCES.txt'
+[3.989s] running build_ext
+[3.990s] Creating /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy.egg-link (link to .)
+[3.994s] Installing ammonia_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[3.995s] Installing cameraPub script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[3.998s] Installing conducao script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[3.998s] Installing controleSerial script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[3.999s] Installing detectorSQLite script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[3.999s] Installing humidity_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.000s] Installing imu_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.001s] Installing lane_detector_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.002s] Installing pose_publisher_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.003s] Installing seguidorCorredor script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.004s] Installing slam_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.005s] Installing temperature_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+[4.006s] 
+[4.007s] Installed /home/robot/ws/src/robonejopy/build/robonejopy
+[4.007s] running symlink_data
+[4.138s] Invoked command in '/home/robot/ws/src/robonejopy/build/robonejopy' returned '0': PYTHONPATH=/home/robot/ws/src/robonejopy/build/robonejopy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/robot/ws/src/robonejopy/build/robonejopy/build --no-deps symlink_data

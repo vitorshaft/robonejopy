@@ -26,7 +26,7 @@ class ObjectDetectionNode(Node):
         self.create_subscription(Temperature, '/ambient_temperature', self.ambient_temperature_callback, 10)
 
         # Model
-        self.model = YOLO('/home/vitor/robonejo/best.pt')
+        self.model = YOLO('/home/robot/ws/src/robonejopy/robonejopy/best.pt')
 
         # Object classes
         self.class_names = ["chicken"]

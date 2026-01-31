@@ -1,0 +1,6 @@
+source;share/robonejopy/hook/pythonpath.ps1
+source;share/robonejopy/hook/pythonpath.dsv
+source;share/robonejopy/hook/pythonpath.sh
+source;share/robonejopy/hook/ament_prefix_path.ps1
+source;share/robonejopy/hook/ament_prefix_path.dsv
+source;share/robonejopy/hook/ament_prefix_path.sh

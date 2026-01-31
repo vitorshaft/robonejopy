@@ -1,0 +1,92 @@
+running develop
+Removing /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy.egg-link (link to .)
+running egg_info
+writing build/robonejopy/robonejopy.egg-info/PKG-INFO
+writing dependency_links to build/robonejopy/robonejopy.egg-info/dependency_links.txt
+writing entry points to build/robonejopy/robonejopy.egg-info/entry_points.txt
+writing requirements to build/robonejopy/robonejopy.egg-info/requires.txt
+writing top-level names to build/robonejopy/robonejopy.egg-info/top_level.txt
+reading manifest file 'build/robonejopy/robonejopy.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'build/robonejopy/robonejopy.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/robot/ws/src/robonejopy/build/robonejopy/build
+creating /home/robot/ws/src/robonejopy/build/robonejopy/build/lib
+creating /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/__init__.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/ammonia_sensor_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/detectorSQLite.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/temperature_sensor_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/controleSerial.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/slam_node0.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/seguidorCorredor.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/cameraPub.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/pose_publisher_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/humidity_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/imu_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/slam_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/detector.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/app.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/conducao.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/lane_detector_node.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/detectorCheck.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+copying robonejopy/lane_detection.py -> /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy
+running install
+running install_lib
+creating /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/__init__.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/ammonia_sensor_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/detectorSQLite.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/temperature_sensor_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/controleSerial.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/slam_node0.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/seguidorCorredor.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/cameraPub.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/pose_publisher_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/humidity_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/imu_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/slam_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/detector.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/app.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/conducao.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/lane_detector_node.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/detectorCheck.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+copying /home/robot/ws/src/robonejopy/build/robonejopy/build/lib/robonejopy/lane_detection.py -> /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/ammonia_sensor_node.py to ammonia_sensor_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/detectorSQLite.py to detectorSQLite.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/temperature_sensor_node.py to temperature_sensor_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/controleSerial.py to controleSerial.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/slam_node0.py to slam_node0.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/seguidorCorredor.py to seguidorCorredor.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/cameraPub.py to cameraPub.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/pose_publisher_node.py to pose_publisher_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/humidity_node.py to humidity_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/imu_node.py to imu_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/slam_node.py to slam_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/detector.py to detector.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/app.py to app.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/conducao.py to conducao.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/lane_detector_node.py to lane_detector_node.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/detectorCheck.py to detectorCheck.cpython-310.pyc
+byte-compiling /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy/lane_detection.py to lane_detection.cpython-310.pyc
+running install_data
+copying resource/robonejopy -> /home/robot/ws/src/robonejopy/install/robonejopy/share/ament_index/resource_index/packages
+copying package.xml -> /home/robot/ws/src/robonejopy/install/robonejopy/share/robonejopy
+running install_egg_info
+Copying build/robonejopy/robonejopy.egg-info to /home/robot/ws/src/robonejopy/install/robonejopy/lib/python3.10/site-packages/robonejopy-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ammonia_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing cameraPub script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing conducao script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing controleSerial script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing detectorSQLite script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing humidity_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing imu_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing lane_detector_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing pose_publisher_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing seguidorCorredor script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing slam_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+Installing temperature_sensor_node script to /home/robot/ws/src/robonejopy/install/robonejopy/lib/robonejopy
+writing list of installed files to '/home/robot/ws/src/robonejopy/build/robonejopy/install.log'
