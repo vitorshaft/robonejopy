@@ -1,7 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Imu
-from sensor_msgs.msg import Temperature
+from sensor_msgs.msg import Imu, Temperature, MagneticField
 import smbus
 import time
 import math
@@ -50,9 +49,10 @@ class IMUNode(Node):
         self.mag_offset_y = 0
 
         self.publisher_ = self.create_publisher(Imu, '/imu/data', 10)
-        self.timer = self.create_timer(0.02, self.publish_imu_data)
-        # Novo Publisher de Temperatura
         self.temp_publisher = self.create_publisher(Temperature, '/ambient_temperature', 10)
+        self.mag_publisher = self.create_publisher(MagneticField, '/magnetic_field', 10)
+
+        self.timer = self.create_timer(0.02, self.publish_imu_data)
 
     def read_word_2c(self, addr, reg):
         try:
@@ -136,6 +136,20 @@ class IMUNode(Node):
                 mx -= self.mag_offset_x
                 my -= self.mag_offset_y
                 
+                # <--- 3. PUBLICAÇÃO DO CAMPO MAGNÉTICO RAW (PARA O DEAD RECKONING)
+                mag_msg = MagneticField()
+                mag_msg.header.stamp = current_time.to_msg()
+                mag_msg.header.frame_id = 'imu_link'
+                
+                # Convertendo para Tesla (Aprox: 1 Gauss = 1e-4 Tesla, QMC sensibilidade ~3000LSB/Gauss)
+                # O Dead Reckoning usa atan2, então a escala absoluta não afeta o ângulo, 
+                # mas para ficar no padrão ROS convertemos aproximadamente.
+                scale_factor = 1.0 / 3000.0 * 0.0001 
+                mag_msg.magnetic_field.x = mx * scale_factor
+                mag_msg.magnetic_field.y = my * scale_factor
+                mag_msg.magnetic_field.z = mz * scale_factor
+                self.mag_publisher.publish(mag_msg)
+
                 # Compensação de Tilt (Nivelamento matemático)
                 Xh = mx * math.cos(self.pitch) + my * math.sin(self.roll) * math.sin(self.pitch) - mz * math.cos(self.roll) * math.sin(self.pitch)
                 Yh = my * math.cos(self.roll) + mz * math.sin(self.roll)

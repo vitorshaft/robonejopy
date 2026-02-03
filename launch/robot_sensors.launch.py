@@ -10,7 +10,7 @@ def generate_launch_description():
             name='imu_node',
             output='screen'
         ),
-
+        # 2. Nó da câmera
         Node(
             package='robonejopy',
             executable='cameraPub',
@@ -23,7 +23,7 @@ def generate_launch_description():
             executable='pose_publisher_node',
             name='pose_publisher_node'
         ),
-        # 3. Inteligência e Navegação (Os nós que blindamos)
+        # 3. Inteligência e Navegação
         Node(
             package='robonejopy',
             executable='dead_reckoning_node', # O nó com auto-calibração e PoseStamped
