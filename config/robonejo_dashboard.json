@@ -1,0 +1,285 @@
+{
+  "configById": {
+    "Plot!1emropo": {
+      "paths": [
+        {
+          "value": "/ambient_temperature.temperature",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#f5774d"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "foxglovePanelTitle": "IMU ambient temp °C"
+    },
+    "Plot!3q421zh": {
+      "paths": [
+        {
+          "value": "/robot_pose.pose.orientation.x",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#f5774d"
+        },
+        {
+          "value": "/robot_pose.pose.orientation.y",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#44ee00"
+        },
+        {
+          "value": "/robot_pose.pose.orientation.z",
+          "enabled": true,
+          "timestampMethod": "receiveTime",
+          "color": "#4e98e2"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240,
+      "xAxisLabel": "/imu/data",
+      "foxglovePanelTitle": "Gravity"
+    },
+    "3D!q9y9i0": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 3.4964922944706416,
+        "phi": 38.06451612904706,
+        "thetaOffset": 24.354838709684895,
+        "targetOffset": [
+          8.329952003802294,
+          2.3637576062248433,
+          2.765126503216517e-16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000,
+        "logDepth": false
+      },
+      "followMode": "follow-pose",
+      "followTf": "map",
+      "scene": {
+        "syncCamera": true,
+        "transforms": {
+          "showLabel": true,
+          "lineWidth": 2,
+          "lineColor": "#ff0000"
+        },
+        "enableStats": true,
+        "labelScaleFactor": 0.8,
+        "ignoreColladaUpAxis": false,
+        "meshUpAxis": "y_up"
+      },
+      "transforms": {
+        "frame:": {
+          "visible": false
+        },
+        "frame:imu_link": {
+          "visible": true
+        },
+        "frame:camera_link": {
+          "visible": true
+        }
+      },
+      "topics": {
+        "/robot_pose": {
+          "visible": true,
+          "axisScale": 0.5
+        },
+        "/robot_pose_estimated": {
+          "visible": true,
+          "axisScale": 0.5,
+          "type": "axis",
+          "color": "#00ffffff",
+          "arrowScale": [
+            1,
+            0.5,
+            0.5
+          ]
+        },
+        "/imu/data": {
+          "visible": false
+        },
+        "/move_base_simple/goal": {
+          "visible": false
+        },
+        "/initialpose": {
+          "visible": false
+        },
+        "/camera/image_raw": {
+          "visible": false
+        },
+        "/camera/processed_image": {
+          "visible": false
+        }
+      },
+      "layers": {
+        "grid": {
+          "visible": true,
+          "drawBehind": false,
+          "label": "Grid",
+          "instanceId": "1c259f64-1726-4760-a7c1-b5ad7fc89abb",
+          "layerId": "foxglove.Grid",
+          "size": 10,
+          "divisions": 10,
+          "lineWidth": 1,
+          "color": "#248eff",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "frameId": "map"
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "Image!21q9ivr": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/camera/image_raw"
+      }
+    },
+    "Image!413up34": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/camera/processed_image"
+      }
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "direction": "row",
+    "first": {
+      "first": "Plot!1emropo",
+      "second": "Plot!3q421zh",
+      "direction": "column"
+    },
+    "second": {
+      "first": "3D!q9y9i0",
+      "second": {
+        "first": "Image!21q9ivr",
+        "second": "Image!413up34",
+        "direction": "row"
+      },
+      "direction": "column"
+    },
+    "splitPercentage": 31.804281345565748
+  }
+}
